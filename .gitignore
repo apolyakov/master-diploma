@@ -1,0 +1,6 @@
+# Ingore all files
+*
+
+# Except these ones
+!*.tex
+!*.bib
