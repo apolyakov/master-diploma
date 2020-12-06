@@ -1,0 +1,77 @@
+% Тут используется класс, установленный на сервере Papeeria. На случай, если
+% текст понадобится редактировать где-то в другом месте, рядом лежит файл matmex-diploma-custom.cls
+% который в момент своего создания был идентичен классу, установленному на сервере.
+% Для того, чтобы им воспользоваться, замените matmex-diploma на matmex-diploma-custom
+% Если вы работаете исключительно в Papeeria то мы настоятельно рекомендуем пользоваться
+% классом matmex-diploma, поскольку он будет автоматически обновляться по мере внесения корректив
+%
+
+% По умолчанию используется шрифт 14 размера. Если нужен 12-й шрифт, уберите опцию [14pt]
+%\documentclass[14pt]{matmex-diploma}
+\documentclass[14pt]{matmex-diploma-custom}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage[mathscr]{euscript}
+
+\usepackage{indentfirst}
+
+
+
+\newcommand\name[1]{\textsc{#1}}
+
+\begin{document}
+% Год, город, название университета и факультета предопределены,
+% но можно и поменять.
+% Если англоязычная титульная страница не нужна, то ее можно просто удалить.
+\filltitle{ru}{
+    chair              = {Программная инженерия},
+    title              = {Декларативный предметно-ориентированный язык разработки интерфейсов мобильных приложений},
+    type               = {coursework},
+    position           = {студента},
+    group              = 671,
+    author             = {Поляков Александр Романович},
+    supervisorPosition = {старший преподаватель},
+    supervisor         = {Дмитрий Луцив},
+    reviewerPosition   = {исследователь в ООО Хуавей},
+    reviewer           = {Алексей Недоря}
+%   university         = {Санкт-Петербургский Государственный Университет},
+%   faculty            = {Математико-механический факультет},
+%   city               = {Санкт-Петербург},
+%   year               = {2019}
+}
+% \filltitle{en}{
+%     chair              = {Software Engineering},
+%     title              = {Automated compiler optimizations tuning},
+%     author             = {Alexander Polyakov},
+%     supervisorPosition = {},
+%     supervisor         = {},
+%     reviewerPosition   = {},
+%     reviewer           = {},
+% }
+\maketitle
+\tableofcontents
+% У введения нет номера главы
+\input{introduction.tex}
+
+\section{Постановка задачи}
+\input{problem_statement.tex}
+
+\section{Обзор}
+\subsection{Обзор предметной области}
+\subsection{Обзор существующих решений}
+
+\section{Архитектура и особенности реализации}
+
+
+\setmonofont[Mapping=tex-text]{CMU Typewriter Text}
+\nocite{*}
+\bibliographystyle{ugost2008ls}
+\bibliography{diploma.bib}
+\end{document}
