@@ -179,7 +179,7 @@
     \ifthenelse{\equal{\my@title@type@ru}{coursework}}
     {Отчёт по учебной (ознакомительной) практике}
     {\ifthenelse{\equal{\my@title@type@ru}{diploma}}
-    {Дипломная работа}
+    {Отчёт о научно-исследовательской практике}
     {\ifthenelse{\equal{\my@title@type@ru}{master}}
     {Магистерская диссертация}
     {\ifthenelse{\equal{\my@title@type@ru}{bachelor}}
@@ -196,7 +196,7 @@
     \vskip 5em
     Научный руководитель:\\
     \my@title@supervisorPosition@ru\ \my@title@supervisor@ru\sigspace
-    Рецензент:\\
+    Консультант:\\
     \my@title@reviewerPosition@ru\ \my@title@reviewer@ru
     }
 \end{center}
