@@ -219,7 +219,7 @@
     {
         {\Large\textbf{\textit{\my@title@author@ru}}}
         \vskip 1em
-        {\large Отчёт по преддипломной научной практике}
+        {\large Выпускная квалификационная работа}
         \vskip 1em
         {\Huge \@title}
 
@@ -335,6 +335,9 @@
                 \vskip 5em
                 Scientific supervisor:\\
                 \my@title@supervisorPosition@en\ \my@title@supervisor@en\\
+                \vskip 1em
+                Consultant:\\
+                \my@title@consultantPosition@en\ \my@title@consultant@en\\                
                 \vskip 1em
                 Reviewer:\\
                 \my@title@reviewerPosition@en\ \my@title@reviewer@en\\

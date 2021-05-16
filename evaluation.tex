@@ -1,0 +1,30 @@
+\section{Апробация}
+Предложенные и описанные в пункте~\ref{section:architecture}
+синтаксические и семантические изменения в спецификации языка \name{Accord}
+были успешно реализованы в прототипе компилятора языка. На
+листинге~\ref{lst:adsl-example} представлен пример графической компоненты,
+описанной на изменённом языке \name{Accord}. Данный пример успешно
+компилируется прототипом компилятора в \name{LLVM IR} и байткод некоторой
+виртуальной машины. На данный момент компиляция полноценных приложений,
+использующих такие графические компоненты, невозможна ввиду отсутствия
+интегрированного с компилятором движка отрисовки. Эта интеграция является
+одной из следующих задач в рамках развития направления разработки
+мобильных приложений на языке \name{Accord}.
+\begin{lstlisting}[language=my_pseudo, caption=Пример графической компоненты на языке \name{Accord}, label={lst:adsl-example}]
+type Counter = struct (View[T]) {
+    rx var counter: i32
+    var condition: bool
+    
+    var body: T = Column(
+        Text("Current count: ${counter}"),
+        Button("Click on me!")
+            .onClick(fn() { counter += 1 })
+            .backgroundColor(Color.Green)
+        ConditionalView(
+            condition,
+            Image("img.png"),
+            Text("No image")
+        )
+    )
+}
+\end{lstlisting}
